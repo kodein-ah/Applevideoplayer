@@ -1,0 +1,96 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.App {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #007bff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #007bff;
+}
+
+.link-button {
+  display: block;
+  width: calc(100% - 20px); /* Full width minus small padding */
+  margin: 10px auto;
+  padding: 16px 24px; /* Increased padding for wider buttons */
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  font-weight: bold;
+  max-width: 600px;
+}
+
+.link-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Responsiveness for mobile */
+@media (max-width: 600px) {
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .link-button {
+    padding: 14px 20px; /* Slightly smaller padding for mobile */
+  }
+}
+
+/* Responsiveness for larger screens */
+@media (min-width: 1024px) {
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .link-button {
+    padding: 18px 28px; /* Larger padding for larger screens */
+    font-size: 18px;
+  }
+}
