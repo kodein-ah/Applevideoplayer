@@ -1,24 +1,19 @@
+// src/components/LinkButton.jsx
 import React from 'react';
-import { useSpring, animated } from '@react-spring/web';
+import PropTypes from 'prop-types';
+import './LinkButton.css'; // Import file CSS
 
 const LinkButton = ({ url, text }) => {
-  const props = useSpring({
-    from: { opacity: 0, transform: 'translateY(-20px)' },
-    to: { opacity: 1, transform: 'translateY(0px)' },
-    config: { duration: 1000 }
-  });
-
   return (
-    <animated.a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="link-button"
-      style={props}
-    >
+    <a href={url} className="link-button" target="_blank" rel="noopener noreferrer">
       {text}
-    </animated.a>
+    </a>
   );
+};
+
+LinkButton.propTypes = {
+  url: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 export default LinkButton;

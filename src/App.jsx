@@ -1,20 +1,17 @@
 import React from 'react';
+import LinkButton from './components/LinkButton';
 import ProfileImage from './components/ProfileImage';
-import AdContainer from './components/AdContainer'; // Import AdContainer
-import VideoPlayerAd from './components/VideoPlayerAd'; // Import VideoPlayerAd
+import AdContainer from './components/AdContainer'; 
+import Images from './assets/yes.jpg';
 
 const App = () => {
   return (
     <div className="App">
       <main>
-        <ProfileImage src="https://raw.githubusercontent.com/kodein-ah/imahe/refs/heads/main/logo-apple-icon-information-apple-logo-png-cb2a995ce5ee2b4049f1daa647471a29.png" alt="Profile" />
-        <h1>Apple Video Player</h1>
-
-        {/* Menambahkan VideoPlayerAd */}
-        <VideoPlayerAd 
-          thumbnail="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAB17ChYm2ZsWed2hAMGKQuREjSUZd5OgCxckDNklBilDxfyk7nvQpvbVT-QKdnsBwKc_TlSbKarmBQnCb4dDT1vR31-4a69E1-Xefr2_cWKND3zCReyxumI_PClKmnJocmLFQFakt8oVesXel7XAMbH95ErwqAUs57Xd4ZEw8ewT6qPePoDCzUqqr09mj/w400-h228/images%20(2).png"
-          directLink="https://www.profitablecpmrate.com/s99hsyay2?key=e0ebf2ace4d775d12331a4c1440a2acb"
-        />
+        <ProfileImage src={Images} alt="Profile" />
+        <h1>Apple Link Bio</h1>
+        <LinkButton url="https://www.profitablecpmrate.com/ipqxesfjj?key=69bf0e1d7d2296a296c2cb3f36698cc7" text="Play video" />
+        <LinkButton url="https://www.profitablecpmrate.com/s99hsyay2?key=e0ebf2ace4d775d12331a4c1440a2acb" text="Downloads" />
 
         {/* Menambahkan iklan native */}
         <AdContainer
